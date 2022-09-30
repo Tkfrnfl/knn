@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
-from KNN import KNN
 
 iris = load_iris()
-X = iris.data[:, :4] # for now, use the first two features.
+print(iris)
+X = iris.data[:, 2:4] # for now, use the first two features.
 y = iris.target
 x1_min, x1_max = X[:, 0].min() - .5, X[:, 0].max() + .5 # 0.5씩 여유두는것
 x2_min, x2_max = X[:, 1].min() - .5, X[:, 1].max() + .5
@@ -15,10 +15,4 @@ plt.xlabel('Sepal length')
 plt.ylabel('Sepal width')
 plt.xlim(x1_min, x1_max)
 plt.ylim(x2_min, x2_max)
-#plt.show()
-
-KNN.get_distance(X,y)
-KNN.get_neighbors()
-KNN.get_predict_vote()
-
-
+plt.show()

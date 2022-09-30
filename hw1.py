@@ -12,13 +12,13 @@ plt.figure(figsize=(8, 6))
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Set1,#colormap>> 색 지정
  edgecolor='k')
 plt.xlabel('Sepal length')
-plt.ylabel('Sepal width')
+plt.ylabel('Sepal widtCLEANh')
 plt.xlim(x1_min, x1_max)
 plt.ylim(x2_min, x2_max)
 #plt.show()
 
 KNN.get_distance(X,y)
 KNN.get_neighbors()
-KNN.get_predict_vote()
+#KNN.get_predict_vote()
 
 

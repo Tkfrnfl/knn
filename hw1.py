@@ -17,8 +17,8 @@ plt.xlim(x1_min, x1_max)
 plt.ylim(x2_min, x2_max)
 #plt.show()
 
-KNN.get_distance(X,y)
+KNN.get_distance(X,y)  # knn 클래스 실행
 KNN.get_neighbors()
-#KNN.get_predict_vote()
+
 
 

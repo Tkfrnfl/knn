@@ -43,7 +43,8 @@ class KNN():
             KNN.ans_weight.append(KNN.get_predict_weight())# 가중치 vote 예측값 저장
 
         KNN.get_output(KNN.ans_vote) # output 함수 실행
-        KNN.get_output(KNN.ans_weight)
+        print("--------weight-------")
+        KNN.get_output(KNN.ans_weight)# output 함수 실행
         
     def get_predict_vote():  # 일반적인 vote
         min_list=[]

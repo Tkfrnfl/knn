@@ -26,7 +26,7 @@ from Knn import KNN
 
 input_list=[]
 for idx, val in enumerate(x_train):
-    if idx<1001:
+    if idx<10000:
         val=val.reshape(28,28)
         input_list.append(val)
         # pil_img = Image.fromarray(np.uint8(val)) 

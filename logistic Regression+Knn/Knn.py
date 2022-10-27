@@ -7,16 +7,18 @@ from PIL import Image
 class KNN():
     K=7
     #int_list28=[]
-
+    dist_list=[]
     def get_distance(input_list,label_list):
 
         for idx, val in enumerate(input_list):
             if(idx+1)%100==0: #10000개의 데이터중 100번째 데이터인 경우 테스트 데이터로 사용
                
                 for idx_10000,val_10000 in (input_list):
-                    if (idx+1)%100!=0:
+                    dist =0
+                    if (idx_10000+1)%100!=0:                   
                         for idx_28,val_28 in enumerate(val):
-                            
+                            dist+=math.pow((val_10000[idx_28]-val_28),2)
+                    KNN.dist_list.append(sqrt(dist),label_list[idx_10000])    
 
                      
 

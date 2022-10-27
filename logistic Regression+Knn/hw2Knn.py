@@ -8,7 +8,7 @@ from Knn import KNN
 (x_train, t_train), (x_test, t_test) = \
  load_mnist(flatten=True, normalize=False) 
 
-# image = x_train[0]
+# image = x_train[1]
 # #label = t_train[0] 
 # # 첫번째 데이터
 # #print(label) 
@@ -23,7 +23,14 @@ from Knn import KNN
 # # 1차원 —> 2차원 (28x28) 
 # print(image) 
 # img_show(image)
+
 input_list=[]
-for idx, val in enumerate(x_train,t_train):
-    input_list.append(val.reshape(28,28))
-#KNN.get_distance(input_list)
+for idx, val in enumerate(x_train):
+    if idx<1001:
+        val=val.reshape(28,28)
+        input_list.append(val)
+        # pil_img = Image.fromarray(np.uint8(val)) 
+        # input_list.append(pil_img.reshape(28,28))
+  
+KNN.get_distance(input_list,t_train)
+KNN.get_neighbors()
